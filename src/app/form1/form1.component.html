@@ -1,0 +1,58 @@
+<body>
+    <div class="container mt-3" style="width: 700px;">
+      <form [formGroup]='registrationPage' (ngSubmit)='submit()'>
+          <h2>User Form</h2>
+          <div class="form-group">
+              <label>First Name*</label>
+                <input type="text" id="firstName"  formControlName="firstName" placeholder="First Name" class="form-control" autofocus required
+                [ngClass]="{ 'is-invalid': submitted &amp;&amp; registrationPage.controls.firstName.errors }" />
+                <div *ngIf="submitted &amp;&amp; registrationPage.controls.firstName.errors" class="text-danger">
+                    <div *ngIf="registrationPage.controls.firstName.errors.required">First Name is required
+                    </div>
+                </div>
+              </div>
+          <div class="form-group">
+            <label>Middle Name</label>
+                <input type="text" id="middlename" formControlName="middleName" placeholder="Middle Name" class="form-control" autofocus required>
+              </div>
+          <div class="form-group">
+              <label>Last Name*</label>
+                  <input type="text" id="lastName" formControlName="lastName" placeholder="Last Name" class="form-control" autofocus required
+                  [ngClass]="{ 'is-invalid': submitted &amp;&amp; registrationPage.controls.firstName.errors }" />
+                <div *ngIf="submitted &amp;&amp; registrationPage.controls.firstName.errors" class="text-danger">
+                    <div *ngIf="registrationPage.controls.firstName.errors.required">Last Name is required
+                    </div>
+                </div>
+          </div>
+          <div class="form-group">
+              <label>Email* </label>
+                  <input type="email" id="email" placeholder="Email" formControlName="email" class="form-control" name= "email" autofocus required
+                  [ngClass]="{ 'is-invalid': submitted &amp;&amp; registrationPage.controls.email.errors }" />
+            <div *ngIf="submitted &amp;&amp; registrationPage.controls.email.errors" class="text-danger">
+                <div *ngIf="registrationPage.controls.email.errors.required">Email is required</div>
+                <div *ngIf="registrationPage.controls.email.errors.email">Enter valid email</div>
+            </div>
+          </div>
+          <div class="form-group">
+              <label>Phone number*</label>
+                  <input type="number" id="phoneNumber" placeholder="Phone number" ng-minlength="5" formControlName="mobile" class="form-control" autofocus required
+                  [ngClass]="{ 'is-invalid': submitted &amp;&amp; registrationPage.controls.mobile.errors }" />
+            <div *ngIf="submitted &amp;&amp; registrationPage.controls.mobile.errors" class="text-danger">
+                <div *ngIf="registrationPage.controls.mobile.errors.required">Phone number is required</div>
+            </div>
+            </div>
+          <div class="form-group">
+              <label>Gender</label>
+              <div>
+                <input type="radio" id="femaleRadio" name="gender" value="Male" checked>Male<br>
+                <input type="radio" id="maleRadio" name="gender" value="Female">Female
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success mr-3">Submit</button>
+            <button class="btn btn-info mr-3" type="reset">Reset</button>
+            <button class="btn btn-warning" type="reset" (click)="refresh()">Refresh</button>
+        </div>
+      </form>
+    </div>
+    </body>
