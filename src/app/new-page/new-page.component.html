@@ -1,0 +1,18 @@
+<body>
+<nav class="navbar bg-dark navbar-dark">
+    <a class="navbar-brand" routerLink="/newPage">
+      <img src="./assets/logo.png" alt="logo">
+    </a>
+    <h1>Welcome Employee</h1>
+      <button class="btn btn-warning" type="submit" routerLink="">LOGOUT</button>
+</nav>
+<aside>
+    <div class="data">
+      <table class="table table-hover " style="width: 150px;">
+        <tr> <td> <div routerLink="/newPage/details" class="btn btn-warning btn-lg btn-block">Details</div></td> </tr>
+        <tr> <td> <div routerLink="/newPage/about" class="btn btn-warning btn-lg btn-block">About</div></td> </tr>
+      </table>
+    </div>
+  </aside>
+    <router-outlet></router-outlet>
+  </body>

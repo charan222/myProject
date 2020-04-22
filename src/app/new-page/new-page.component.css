@@ -1,0 +1,11 @@
+h1{
+    color: white;
+    margin-right: 10%;
+}
+aside{
+    float: left;
+    padding-top: 50px;
+}
+.data{
+    height: 600px;
+}

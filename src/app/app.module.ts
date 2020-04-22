@@ -17,6 +17,10 @@ import { Form1Component } from './form1/form1.component';
 import { ServiceService } from './service.service';
 import { DyanmicComponent } from './dyanmic/dyanmic.component';
 import { Form2Component } from './form2/form2.component';
+import { LoginComponent } from './login/login.component';
+import { NewPageComponent } from './new-page/new-page.component';
+import { DetailsComponent } from './details/details.component';
+import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +35,11 @@ import { Form2Component } from './form2/form2.component';
     AdminComponent,
     Form1Component,
     DyanmicComponent,
-    Form2Component
+    Form2Component,
+    LoginComponent,
+    NewPageComponent,
+    DetailsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,10 @@ import { FormComponent } from './form/form.component';
 import { AdminComponent } from './admin/admin.component';
 import { HeaderComponent } from './header/header.component';
 import { Form2Component } from './form2/form2.component';
+import { LoginComponent } from './login/login.component';
+import { NewPageComponent } from './new-page/new-page.component';
+import { DetailsComponent } from './details/details.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -27,6 +31,24 @@ const routes: Routes = [
       {
         path:'home',
         component: HeaderComponent
+      },
+      {
+        path:'login',
+        component: LoginComponent
+      }
+    ]
+  },
+  {
+    path:'newPage',
+    component: NewPageComponent,
+    children:[
+      {
+        path:'details',
+        component: DetailsComponent
+      },
+      {
+        path:'about',
+        component: AboutComponent
       }
     ]
   }

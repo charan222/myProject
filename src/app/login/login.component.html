@@ -1,0 +1,19 @@
+<body>
+    <div class="container mt-3" style="width: 700px;">
+    <h2>Login</h2>
+    
+        <div class="form-group">
+            <label >Username</label>
+            <input type="text" [(ngModel)]="username" class="form-control" required />
+        </div><br>
+        <div class="form-group">
+            <label >Password</label>
+            <input type="password" [(ngModel)]="password" class="form-control"  />
+            <b>{{password}}</b>
+        </div><br>
+        <div class="form-group">
+            <button class="btn btn-info" (click)="onSubmit()">Login</button>
+        </div>
+        <p>U.name= charan22, pwd=clouder</p>
+    </div>
+</body>
